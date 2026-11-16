@@ -265,7 +265,7 @@ var DP=null;
 window.addEventListener('beforeinstallprompt',ev=>{ev.preventDefault();DP=ev;const b=$('#ib');if(b)b.style.display='block'});
 window.addEventListener('appinstalled',()=>{DP=null;const b=$('#ib');if(b)b.style.display='none'});
 function installApp(){if(DP){DP.prompt();DP=null}$('#pm').style.display='none'}
-const APP_VER='2026.11.07.01';$('#av').textContent=APP_VER;
+const APP_VER='2026.11.16.01';$('#av').textContent=APP_VER;
 const vcmp=(a,b)=>{const x=a.split('.').map(Number),y=b.split('.').map(Number);for(let i=0;i<Math.max(x.length,y.length);i++){const d=(x[i]||0)-(y[i]||0);if(d)return d>0?1:-1}return 0};
 async function doUpdate(btn){
  if(!navigator.onLine){alert('No internet connection — you need to be online to update');return}
@@ -698,15 +698,20 @@ import {initializeApp} from "https://www.gstatic.com/firebasejs/10.14.1/firebase
 import {getAuth,onAuthStateChanged,GoogleAuthProvider,signInWithPopup,signInWithRedirect,signOut} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
 import {getDatabase,ref,onValue,set,get,remove} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js";
 const firebaseConfig={
-  apiKey:"AIzaSyB8vfE8TStwGHo1g27Oy5unfun8hvJo3ks",
-  authDomain:"my-app242.firebaseapp.com",
-  databaseURL:"https://my-app242-default-rtdb.firebaseio.com",
-  projectId:"my-app242",
-  storageBucket:"my-app242.firebasestorage.app",
-  messagingSenderId:"606734103296",
-  appId:"1:606734103296:web:c6a276829eed68290439e5",
-  measurementId:"G-EGNGXM5GGX"
+  apiKey:"AIzaSyB8ZranRlv7kaA-pkUhuIbNd6fYDUv6oVA",
+  authDomain:"mymuhurtow.firebaseapp.com",
+  databaseURL:"https://mymuhurtow-default-rtdb.firebaseio.com",
+  projectId:"mymuhurtow",
+  storageBucket:"mymuhurtow.firebasestorage.app",
+  messagingSenderId:"104210821633",
+  appId:"1:104210821633:web:137fee692c5d837dfd8600",
+  measurementId:"G-QKCYY4GB4V"
 };
+/* আগের কনফিগ (my-app242) — দরকার হলে ফেরত যেতে:
+  apiKey:"AIzaSyB8vfE8TStwGHo1g27Oy5unfun8hvJo3ks", authDomain:"my-app242.firebaseapp.com",
+  databaseURL:"https://my-app242-default-rtdb.firebaseio.com", projectId:"my-app242",
+  storageBucket:"my-app242.firebasestorage.app", messagingSenderId:"606734103296",
+  appId:"1:606734103296:web:c6a276829eed68290439e5", measurementId:"G-EGNGXM5GGX" */
 // ⚠️ এখানে অ্যাডমিনের (আপনার) Gmail বসান — Firebase Rules-এও একই ইমেইল দিতে হবে
 const ADMIN="arafatahmed.cit.bd@gmail.com";
 const app=initializeApp(firebaseConfig),auth=getAuth(app),db=getDatabase(app);
